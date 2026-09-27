@@ -1,0 +1,317 @@
+{
+  "case_id": "TEST-COMPROMISED",
+  "scenario": "COMPROMISED",
+  "seed": 26228,
+  "timestamp": "2026-09-16T05:56:35.816975+00:00",
+  "verdict": "COMPROMISED",
+  "confidence": 94,
+  "disposition": "QUARANTINE",
+  "trust_score_signal": 100,
+  "inputs": {
+    "dataset": "synthetic_candidate_dataset",
+    "model": "candidate_model.onnx",
+    "contributor": "Local-Synthetic"
+  },
+  "data_metrics": {
+    "exact_duplicates": [],
+    "near_duplicates": [],
+    "label_inconsistency": [],
+    "trigger_ids": [
+      "IMG-008",
+      "IMG-009",
+      "IMG-010",
+      "IMG-011",
+      "IMG-012",
+      "IMG-013",
+      "IMG-014",
+      "IMG-015"
+    ],
+    "trigger_target_rate": 1.0
+  },
+  "distribution": {
+    "state": "SHIFT_DETECTED",
+    "normalized_shift": 0.08039935606430788,
+    "characterization": "MEAN_AND_SPREAD_CHANGED",
+    "features": [
+      132.6890625,
+      63.37779978329237,
+      151.2875
+    ],
+    "reference": [
+      130.00859375,
+      61.65318134449723,
+      129.84375
+    ]
+  },
+  "model": {
+    "artifact_hash": "ac77ac4730fcfe087e25813383755fa8b9e5e76cfaea62732e08fdca7e0997ff",
+    "reference_hash": "c801a68bd559895ce2faa8328f439ab658ad4c59a72b9147e45da4fbdc7ff9ac",
+    "behavior_reference": [
+      0.11,
+      0.23,
+      0.38,
+      0.44,
+      0.57,
+      0.63,
+      0.72,
+      0.81
+    ],
+    "behavior_candidate": [
+      0.11,
+      0.23,
+      0.91,
+      0.94,
+      0.93,
+      0.95,
+      0.72,
+      0.81
+    ],
+    "behavior_distance": 0.21375,
+    "white_box_available": false
+  },
+  "inference": {
+    "record": {
+      "image_hash": "df45f1b19d2e637e252b109ad72869a9ec65233a05630deb6f343d7ee44711c6",
+      "model_hash": "ac77ac4730fcfe087e25813383755fa8b9e5e76cfaea62732e08fdca7e0997ff",
+      "preprocess_hash": "71f7e8df4e95c96dd6ae7290c0a46a7cb2056c5820260492f248a12f21551c2f",
+      "output_hash": "230557db845ff0fef5c415017aadb5e80640c3ce3c99f6260b33ed4a4e224c55",
+      "timestamp": "2026-09-14T00:00:04Z",
+      "sequence": 4,
+      "nonce": "N-004",
+      "record_hash": "d1462790ffc23c747f7fbacd9987f86a7260eb4ea9cf31a275ec522c182d9dcc"
+    },
+    "verification": {
+      "model_match": false,
+      "image_match": true,
+      "preprocess_match": true,
+      "output_match": true,
+      "replay_detected": true
+    },
+    "supplied_model_hash": "bec1bbd7330500c8f81ef2a9486453a4d949d1841a95881386e58a5dd8a50344"
+  },
+  "reasons": [
+    "Artifact identity/replay integrity failed.",
+    "Controlled behavioral probes reproduced anomalous behavior.",
+    "Trigger-associated data evidence corroborates the model finding.",
+    "Distribution shift was treated as context, not proof."
+  ],
+  "evidence": [
+    {
+      "evidence_id": "E-DATA-01",
+      "domain": "DATA",
+      "detector": "Near-duplicate analysis",
+      "observation": "0 near-duplicate pairs detected.",
+      "severity": "LOW",
+      "confidence": 0.93,
+      "status": "CORROBORATED",
+      "supports": [],
+      "contradicts": [],
+      "alternatives": [],
+      "controlled": [],
+      "limitation": null
+    },
+    {
+      "evidence_id": "E-DATA-02",
+      "domain": "DATA",
+      "detector": "Label consistency analysis",
+      "observation": "0 locally inconsistent samples detected.",
+      "severity": "LOW",
+      "confidence": 0.91,
+      "status": "CORROBORATED",
+      "supports": [
+        "E-DATA-01"
+      ],
+      "contradicts": [],
+      "alternatives": [],
+      "controlled": [],
+      "limitation": null
+    },
+    {
+      "evidence_id": "E-DATA-03",
+      "domain": "DATA",
+      "detector": "Trigger-pattern analysis",
+      "observation": "8 samples contain the repeated localized pattern; target-label rate 100%.",
+      "severity": "HIGH",
+      "confidence": 0.88,
+      "status": "CORROBORATED",
+      "supports": [
+        "E-DATA-02"
+      ],
+      "contradicts": [],
+      "alternatives": [
+        "Legitimate acquisition artifact",
+        "Annotation convention"
+      ],
+      "controlled": [],
+      "limitation": null
+    },
+    {
+      "evidence_id": "E-DIST-01",
+      "domain": "DISTRIBUTION",
+      "detector": "Reference distribution comparison",
+      "observation": "Normalized shift=0.080; MEAN_AND_SPREAD_CHANGED.",
+      "severity": "MEDIUM",
+      "confidence": 0.86,
+      "status": "UNRESOLVED",
+      "supports": [],
+      "contradicts": [
+        "E-MODEL-01"
+      ],
+      "alternatives": [
+        "Legitimate sensor/season/terrain/illumination shift"
+      ],
+      "controlled": [],
+      "limitation": null
+    },
+    {
+      "evidence_id": "E-MODEL-01",
+      "domain": "MODEL",
+      "detector": "Behavioral reference battery",
+      "observation": "Mean probe distance=0.214 against trusted reference.",
+      "severity": "CRITICAL",
+      "confidence": 0.95,
+      "status": "CORROBORATED",
+      "supports": [
+        "E-DATA-03"
+      ],
+      "contradicts": [],
+      "alternatives": [],
+      "controlled": [
+        "Controlled local probe battery reproduced anomalous response."
+      ],
+      "limitation": "White-box parameter/activation access unavailable; behavioral fallback used."
+    },
+    {
+      "evidence_id": "E-INF-01",
+      "domain": "INFERENCE",
+      "detector": "Artifact identity verification",
+      "observation": "Recorded model identity does not match supplied identity.",
+      "severity": "CRITICAL",
+      "confidence": 0.99,
+      "status": "CORROBORATED",
+      "supports": [],
+      "contradicts": [],
+      "alternatives": [],
+      "controlled": [
+        "SHA-256 identity comparison failed."
+      ],
+      "limitation": null
+    },
+    {
+      "evidence_id": "E-INF-02",
+      "domain": "INFERENCE",
+      "detector": "Replay detection",
+      "observation": "Sequence/nonce reuse indicates replay.",
+      "severity": "HIGH",
+      "confidence": 0.98,
+      "status": "CORROBORATED",
+      "supports": [],
+      "contradicts": [],
+      "alternatives": [],
+      "controlled": [
+        "Sequence and nonce reuse detected."
+      ],
+      "limitation": null
+    }
+  ],
+  "cross_examination": [
+    {
+      "question": "Could legitimate distribution shift explain the anomaly?",
+      "status": "NOT_SUFFICIENT",
+      "detail": "Shift is context, not proof of compromise."
+    },
+    {
+      "question": "Does controlled examination reproduce suspicious behavior?",
+      "status": "RESOLVED",
+      "detail": "Controlled local probes reproduced the behavior."
+    },
+    {
+      "question": "Could provenance mismatch explain the inference anomaly?",
+      "status": "RESOLVED",
+      "detail": "Artifact identity is independently checkable with SHA-256."
+    }
+  ],
+  "contradiction_check": {
+    "state": "RESOLVED",
+    "summary": "Competing explanations were tested; independent behavioral and provenance evidence resolved the strongest conflict."
+  },
+  "assessment": {
+    "method": "Evidence-weighted rule assessment with corroboration, contradiction and controlled-examination context.",
+    "confidence_meaning": "Confidence in the assessment, not probability of malicious intent.",
+    "limitations": [
+      "Deterministic synthetic scenarios are used for reproducibility.",
+      "Distribution shift is not proof of compromise.",
+      "White-box analysis is unavailable when model state access is absent.",
+      "Operational thresholds require validation against trusted reference data."
+    ]
+  },
+  "audit": [
+    {
+      "sequence": 1,
+      "timestamp": "2026-09-16T05:56:35.816824+00:00",
+      "event": "EVIDENCE_RECORDED",
+      "evidence_id": "E-DATA-01",
+      "previous_hash": "GENESIS",
+      "record_hash": "a66c3fc5b660821bb2514e3b5a8bdd058b76904831c0c844d13a5eae17f7ffd6"
+    },
+    {
+      "sequence": 2,
+      "timestamp": "2026-09-16T05:56:35.816904+00:00",
+      "event": "EVIDENCE_RECORDED",
+      "evidence_id": "E-DATA-02",
+      "previous_hash": "a66c3fc5b660821bb2514e3b5a8bdd058b76904831c0c844d13a5eae17f7ffd6",
+      "record_hash": "da68efe888e064422b4b04086f726dd2d8571e5806844af03828c6a362182867"
+    },
+    {
+      "sequence": 3,
+      "timestamp": "2026-09-16T05:56:35.816920+00:00",
+      "event": "EVIDENCE_RECORDED",
+      "evidence_id": "E-DATA-03",
+      "previous_hash": "da68efe888e064422b4b04086f726dd2d8571e5806844af03828c6a362182867",
+      "record_hash": "3a324779be356444c9cd9d33b694aab8c31874ed615ed981835d5c4088dc5b29"
+    },
+    {
+      "sequence": 4,
+      "timestamp": "2026-09-16T05:56:35.816932+00:00",
+      "event": "EVIDENCE_RECORDED",
+      "evidence_id": "E-DIST-01",
+      "previous_hash": "3a324779be356444c9cd9d33b694aab8c31874ed615ed981835d5c4088dc5b29",
+      "record_hash": "c5314fc7df576bc8854e84a1c0168b4a01f71d7a4014865662fc3af8cc58208d"
+    },
+    {
+      "sequence": 5,
+      "timestamp": "2026-09-16T05:56:35.816942+00:00",
+      "event": "EVIDENCE_RECORDED",
+      "evidence_id": "E-MODEL-01",
+      "previous_hash": "c5314fc7df576bc8854e84a1c0168b4a01f71d7a4014865662fc3af8cc58208d",
+      "record_hash": "24f2bf6f7b610e5d5b5c536acd3ef4f812d6644956e9cc270f976ce5c7b93dde"
+    },
+    {
+      "sequence": 6,
+      "timestamp": "2026-09-16T05:56:35.816953+00:00",
+      "event": "EVIDENCE_RECORDED",
+      "evidence_id": "E-INF-01",
+      "previous_hash": "24f2bf6f7b610e5d5b5c536acd3ef4f812d6644956e9cc270f976ce5c7b93dde",
+      "record_hash": "9af03744b0f3b54c64d8fb8a90f3c6fc95d26457eba29cf35a813550d5a3af89"
+    },
+    {
+      "sequence": 7,
+      "timestamp": "2026-09-16T05:56:35.816964+00:00",
+      "event": "EVIDENCE_RECORDED",
+      "evidence_id": "E-INF-02",
+      "previous_hash": "9af03744b0f3b54c64d8fb8a90f3c6fc95d26457eba29cf35a813550d5a3af89",
+      "record_hash": "aa180c2a55b43530f4fddbc3f1d5a10388f77a234ee6fdd796e9fb1c9ab21150"
+    }
+  ],
+  "coverage": [
+    "data integrity",
+    "model integrity",
+    "inference provenance",
+    "distribution shift",
+    "evidence linkage",
+    "cross-examination",
+    "contradiction handling",
+    "tamper-evident audit",
+    "reproducible scenarios"
+  ]
+}

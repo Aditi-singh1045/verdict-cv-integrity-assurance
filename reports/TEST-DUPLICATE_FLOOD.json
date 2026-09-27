@@ -1,0 +1,563 @@
+{
+  "case_id": "TEST-DUPLICATE_FLOOD",
+  "scenario": "DUPLICATE_FLOOD",
+  "seed": 26228,
+  "timestamp": "2026-09-16T05:56:35.853322+00:00",
+  "verdict": "REVIEW",
+  "confidence": 76,
+  "disposition": "HUMAN REVIEW",
+  "trust_score_signal": 35,
+  "inputs": {
+    "dataset": "synthetic_candidate_dataset",
+    "model": "candidate_model.onnx",
+    "contributor": "Local-Synthetic"
+  },
+  "data_metrics": {
+    "exact_duplicates": [
+      [
+        "IMG-005",
+        "IMG-030"
+      ],
+      [
+        "IMG-005",
+        "IMG-031"
+      ],
+      [
+        "IMG-005",
+        "IMG-032"
+      ],
+      [
+        "IMG-005",
+        "IMG-033"
+      ],
+      [
+        "IMG-005",
+        "IMG-034"
+      ],
+      [
+        "IMG-005",
+        "IMG-035"
+      ],
+      [
+        "IMG-005",
+        "IMG-036"
+      ],
+      [
+        "IMG-005",
+        "IMG-037"
+      ],
+      [
+        "IMG-005",
+        "IMG-038"
+      ],
+      [
+        "IMG-005",
+        "IMG-039"
+      ]
+    ],
+    "near_duplicates": [
+      [
+        "IMG-005",
+        "IMG-030"
+      ],
+      [
+        "IMG-005",
+        "IMG-031"
+      ],
+      [
+        "IMG-005",
+        "IMG-032"
+      ],
+      [
+        "IMG-005",
+        "IMG-033"
+      ],
+      [
+        "IMG-005",
+        "IMG-034"
+      ],
+      [
+        "IMG-005",
+        "IMG-035"
+      ],
+      [
+        "IMG-005",
+        "IMG-036"
+      ],
+      [
+        "IMG-005",
+        "IMG-037"
+      ],
+      [
+        "IMG-005",
+        "IMG-038"
+      ],
+      [
+        "IMG-005",
+        "IMG-039"
+      ],
+      [
+        "IMG-030",
+        "IMG-031"
+      ],
+      [
+        "IMG-030",
+        "IMG-032"
+      ],
+      [
+        "IMG-030",
+        "IMG-033"
+      ],
+      [
+        "IMG-030",
+        "IMG-034"
+      ],
+      [
+        "IMG-030",
+        "IMG-035"
+      ],
+      [
+        "IMG-030",
+        "IMG-036"
+      ],
+      [
+        "IMG-030",
+        "IMG-037"
+      ],
+      [
+        "IMG-030",
+        "IMG-038"
+      ],
+      [
+        "IMG-030",
+        "IMG-039"
+      ],
+      [
+        "IMG-031",
+        "IMG-032"
+      ],
+      [
+        "IMG-031",
+        "IMG-033"
+      ],
+      [
+        "IMG-031",
+        "IMG-034"
+      ],
+      [
+        "IMG-031",
+        "IMG-035"
+      ],
+      [
+        "IMG-031",
+        "IMG-036"
+      ],
+      [
+        "IMG-031",
+        "IMG-037"
+      ],
+      [
+        "IMG-031",
+        "IMG-038"
+      ],
+      [
+        "IMG-031",
+        "IMG-039"
+      ],
+      [
+        "IMG-032",
+        "IMG-033"
+      ],
+      [
+        "IMG-032",
+        "IMG-034"
+      ],
+      [
+        "IMG-032",
+        "IMG-035"
+      ],
+      [
+        "IMG-032",
+        "IMG-036"
+      ],
+      [
+        "IMG-032",
+        "IMG-037"
+      ],
+      [
+        "IMG-032",
+        "IMG-038"
+      ],
+      [
+        "IMG-032",
+        "IMG-039"
+      ],
+      [
+        "IMG-033",
+        "IMG-034"
+      ],
+      [
+        "IMG-033",
+        "IMG-035"
+      ],
+      [
+        "IMG-033",
+        "IMG-036"
+      ],
+      [
+        "IMG-033",
+        "IMG-037"
+      ],
+      [
+        "IMG-033",
+        "IMG-038"
+      ],
+      [
+        "IMG-033",
+        "IMG-039"
+      ],
+      [
+        "IMG-034",
+        "IMG-035"
+      ],
+      [
+        "IMG-034",
+        "IMG-036"
+      ],
+      [
+        "IMG-034",
+        "IMG-037"
+      ],
+      [
+        "IMG-034",
+        "IMG-038"
+      ],
+      [
+        "IMG-034",
+        "IMG-039"
+      ],
+      [
+        "IMG-035",
+        "IMG-036"
+      ],
+      [
+        "IMG-035",
+        "IMG-037"
+      ],
+      [
+        "IMG-035",
+        "IMG-038"
+      ],
+      [
+        "IMG-035",
+        "IMG-039"
+      ],
+      [
+        "IMG-036",
+        "IMG-037"
+      ],
+      [
+        "IMG-036",
+        "IMG-038"
+      ],
+      [
+        "IMG-036",
+        "IMG-039"
+      ],
+      [
+        "IMG-037",
+        "IMG-038"
+      ],
+      [
+        "IMG-037",
+        "IMG-039"
+      ],
+      [
+        "IMG-038",
+        "IMG-039"
+      ]
+    ],
+    "label_inconsistency": [],
+    "trigger_ids": [],
+    "trigger_target_rate": 0
+  },
+  "distribution": {
+    "state": "NO_SHIFT",
+    "normalized_shift": 0.015023104797323298,
+    "characterization": "NO_MEASURABLE_CHANGE",
+    "features": [
+      132.8875,
+      62.460536290925326,
+      130.9875
+    ],
+    "reference": [
+      130.00859375,
+      61.65318134449723,
+      129.84375
+    ]
+  },
+  "model": {
+    "artifact_hash": "61f18dc58ef1fe5b8c195f4f6ea8b39599328d9de6492cdc84fb2e61b9367d51",
+    "reference_hash": "c801a68bd559895ce2faa8328f439ab658ad4c59a72b9147e45da4fbdc7ff9ac",
+    "behavior_reference": [
+      0.11,
+      0.23,
+      0.38,
+      0.44,
+      0.57,
+      0.63,
+      0.72,
+      0.81
+    ],
+    "behavior_candidate": [
+      0.11,
+      0.23,
+      0.38,
+      0.44,
+      0.57,
+      0.63,
+      0.72,
+      0.81
+    ],
+    "behavior_distance": 0.0,
+    "white_box_available": false
+  },
+  "inference": {
+    "record": {
+      "image_hash": "df45f1b19d2e637e252b109ad72869a9ec65233a05630deb6f343d7ee44711c6",
+      "model_hash": "61f18dc58ef1fe5b8c195f4f6ea8b39599328d9de6492cdc84fb2e61b9367d51",
+      "preprocess_hash": "71f7e8df4e95c96dd6ae7290c0a46a7cb2056c5820260492f248a12f21551c2f",
+      "output_hash": "230557db845ff0fef5c415017aadb5e80640c3ce3c99f6260b33ed4a4e224c55",
+      "timestamp": "2026-09-14T00:00:04Z",
+      "sequence": 4,
+      "nonce": "N-004",
+      "record_hash": "626eac0ec71dc345b3ab43f5ff01b7ea4d563fb163c173df363ffa247f2376dc"
+    },
+    "verification": {
+      "model_match": true,
+      "image_match": true,
+      "preprocess_match": true,
+      "output_match": true,
+      "replay_detected": false
+    },
+    "supplied_model_hash": "61f18dc58ef1fe5b8c195f4f6ea8b39599328d9de6492cdc84fb2e61b9367d51"
+  },
+  "reasons": [
+    "A material data or behavioral anomaly was observed, but it does not by itself establish compromise.",
+    "Competing explanations and operational impact require human assessment.",
+    "No decisive provenance failure was established."
+  ],
+  "evidence": [
+    {
+      "evidence_id": "E-DATA-01",
+      "domain": "DATA",
+      "detector": "Near-duplicate analysis",
+      "observation": "55 near-duplicate pairs detected.",
+      "severity": "HIGH",
+      "confidence": 0.93,
+      "status": "UNCORROBORATED",
+      "supports": [],
+      "contradicts": [],
+      "alternatives": [],
+      "controlled": [],
+      "limitation": null
+    },
+    {
+      "evidence_id": "E-DATA-02",
+      "domain": "DATA",
+      "detector": "Label consistency analysis",
+      "observation": "0 locally inconsistent samples detected.",
+      "severity": "LOW",
+      "confidence": 0.91,
+      "status": "CORROBORATED",
+      "supports": [
+        "E-DATA-01"
+      ],
+      "contradicts": [],
+      "alternatives": [],
+      "controlled": [],
+      "limitation": null
+    },
+    {
+      "evidence_id": "E-DATA-03",
+      "domain": "DATA",
+      "detector": "Trigger-pattern analysis",
+      "observation": "0 samples contain the repeated localized pattern; target-label rate 0%.",
+      "severity": "LOW",
+      "confidence": 0.88,
+      "status": "CORROBORATED",
+      "supports": [
+        "E-DATA-02"
+      ],
+      "contradicts": [],
+      "alternatives": [
+        "Legitimate acquisition artifact",
+        "Annotation convention"
+      ],
+      "controlled": [],
+      "limitation": null
+    },
+    {
+      "evidence_id": "E-DIST-01",
+      "domain": "DISTRIBUTION",
+      "detector": "Reference distribution comparison",
+      "observation": "Normalized shift=0.015; NO_MEASURABLE_CHANGE.",
+      "severity": "LOW",
+      "confidence": 0.86,
+      "status": "CORROBORATED",
+      "supports": [],
+      "contradicts": [],
+      "alternatives": [],
+      "controlled": [],
+      "limitation": null
+    },
+    {
+      "evidence_id": "E-MODEL-01",
+      "domain": "MODEL",
+      "detector": "Behavioral reference battery",
+      "observation": "Mean probe distance=0.000 against trusted reference.",
+      "severity": "LOW",
+      "confidence": 0.96,
+      "status": "CORROBORATED",
+      "supports": [
+        "E-DATA-03"
+      ],
+      "contradicts": [],
+      "alternatives": [],
+      "controlled": [
+        "Reference battery reproduced expected behavior."
+      ],
+      "limitation": "White-box parameter/activation access unavailable; behavioral fallback used."
+    },
+    {
+      "evidence_id": "E-INF-01",
+      "domain": "INFERENCE",
+      "detector": "Artifact identity verification",
+      "observation": "Recorded model identity matches supplied identity.",
+      "severity": "LOW",
+      "confidence": 0.99,
+      "status": "CORROBORATED",
+      "supports": [],
+      "contradicts": [],
+      "alternatives": [],
+      "controlled": [
+        "SHA-256 identity comparison verified."
+      ],
+      "limitation": null
+    },
+    {
+      "evidence_id": "E-INF-02",
+      "domain": "INFERENCE",
+      "detector": "Replay detection",
+      "observation": "No sequence/nonce replay indicator detected.",
+      "severity": "LOW",
+      "confidence": 0.98,
+      "status": "CORROBORATED",
+      "supports": [],
+      "contradicts": [],
+      "alternatives": [],
+      "controlled": [],
+      "limitation": null
+    }
+  ],
+  "cross_examination": [
+    {
+      "question": "Could legitimate distribution shift explain the anomaly?",
+      "status": "UNRESOLVED",
+      "detail": "Reference comparison does not support material shift."
+    },
+    {
+      "question": "Does controlled examination reproduce suspicious behavior?",
+      "status": "UNRESOLVED",
+      "detail": "No suspicious controlled reproduction."
+    },
+    {
+      "question": "Could provenance mismatch explain the inference anomaly?",
+      "status": "RESOLVED",
+      "detail": "Artifact identity is independently checkable with SHA-256."
+    }
+  ],
+  "contradiction_check": {
+    "state": "UNRESOLVED",
+    "summary": "Competing explanations remain plausible and are retained for human review."
+  },
+  "assessment": {
+    "method": "Evidence-weighted rule assessment with corroboration, contradiction and controlled-examination context.",
+    "confidence_meaning": "Confidence in the assessment, not probability of malicious intent.",
+    "limitations": [
+      "Deterministic synthetic scenarios are used for reproducibility.",
+      "Distribution shift is not proof of compromise.",
+      "White-box analysis is unavailable when model state access is absent.",
+      "Operational thresholds require validation against trusted reference data."
+    ]
+  },
+  "audit": [
+    {
+      "sequence": 1,
+      "timestamp": "2026-09-16T05:56:35.853217+00:00",
+      "event": "EVIDENCE_RECORDED",
+      "evidence_id": "E-DATA-01",
+      "previous_hash": "GENESIS",
+      "record_hash": "621d0653f80d1e3991356534a4529173ac8eba9b5fa2cbe47fe8085527ea0d92"
+    },
+    {
+      "sequence": 2,
+      "timestamp": "2026-09-16T05:56:35.853254+00:00",
+      "event": "EVIDENCE_RECORDED",
+      "evidence_id": "E-DATA-02",
+      "previous_hash": "621d0653f80d1e3991356534a4529173ac8eba9b5fa2cbe47fe8085527ea0d92",
+      "record_hash": "4ee4028f25913efe8daaf169d7f020286fdc7125c62bc062d13b7428ef66ba7b"
+    },
+    {
+      "sequence": 3,
+      "timestamp": "2026-09-16T05:56:35.853269+00:00",
+      "event": "EVIDENCE_RECORDED",
+      "evidence_id": "E-DATA-03",
+      "previous_hash": "4ee4028f25913efe8daaf169d7f020286fdc7125c62bc062d13b7428ef66ba7b",
+      "record_hash": "ee47ae327b210fc46f49701d6855949f50b2ec0af394ad7f6aff5c4debad1eea"
+    },
+    {
+      "sequence": 4,
+      "timestamp": "2026-09-16T05:56:35.853281+00:00",
+      "event": "EVIDENCE_RECORDED",
+      "evidence_id": "E-DIST-01",
+      "previous_hash": "ee47ae327b210fc46f49701d6855949f50b2ec0af394ad7f6aff5c4debad1eea",
+      "record_hash": "56cd8655a8fb8d8a3735bb012d9a84126f72f212e65094cd1b9fd5317e6ef667"
+    },
+    {
+      "sequence": 5,
+      "timestamp": "2026-09-16T05:56:35.853291+00:00",
+      "event": "EVIDENCE_RECORDED",
+      "evidence_id": "E-MODEL-01",
+      "previous_hash": "56cd8655a8fb8d8a3735bb012d9a84126f72f212e65094cd1b9fd5317e6ef667",
+      "record_hash": "ca01fb72c31128f8afe41c3021e96c63cf815355da68060ae9871c304e3e2a43"
+    },
+    {
+      "sequence": 6,
+      "timestamp": "2026-09-16T05:56:35.853301+00:00",
+      "event": "EVIDENCE_RECORDED",
+      "evidence_id": "E-INF-01",
+      "previous_hash": "ca01fb72c31128f8afe41c3021e96c63cf815355da68060ae9871c304e3e2a43",
+      "record_hash": "a8b031b36447bab28f3cd11a96b8762234202120ae82d339e272a8eb9091ad4a"
+    },
+    {
+      "sequence": 7,
+      "timestamp": "2026-09-16T05:56:35.853312+00:00",
+      "event": "EVIDENCE_RECORDED",
+      "evidence_id": "E-INF-02",
+      "previous_hash": "a8b031b36447bab28f3cd11a96b8762234202120ae82d339e272a8eb9091ad4a",
+      "record_hash": "ad40a8bde261e045852f380578bee3fbe69b9e2e9d0da6cf29770eeb6a44aff3"
+    }
+  ],
+  "coverage": [
+    "data integrity",
+    "model integrity",
+    "inference provenance",
+    "distribution shift",
+    "evidence linkage",
+    "cross-examination",
+    "contradiction handling",
+    "tamper-evident audit",
+    "reproducible scenarios"
+  ]
+}
