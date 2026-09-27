@@ -198,3 +198,4 @@ Pre-generated report and audit snapshots are also available directly in [`report
 **Project:** VERDICT — Computer Vision Integrity Assurance Engine
 **Context:** Smart India Hackathon (SIH) 2026 — Final Demo Prototype
 **Author:** Aditi Singh
+**Collaborator:**
