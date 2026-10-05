@@ -192,8 +192,13 @@ Pre-generated report and audit snapshots are also available directly in [`report
 - Operational thresholds (behavioral distance, shift normalization, duplicate distance) are demonstration defaults and require validation against real trusted reference data before any production use.
 
 ---
+## License
 
-## Context
+Copyright (c) 2026 Aditi Singh. All rights reserved. 
+This software is proprietary. Unauthorized copying, modification, or distribution is strictly prohibited.
+---
+
+## Credits
 
 **Project:** VERDICT — Computer Vision Integrity Assurance Engine
 **Context:** Smart India Hackathon (SIH) 2026 — Final Demo Prototype
